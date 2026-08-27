@@ -1,6 +1,6 @@
-import { ArrowRightIcon, Link } from "lucide-react";
 import { cookies } from "next/headers";
 import Image from "next/image";
+import Link from "next/link";
 import { getProducts } from "@/app/api/products";
 import { keysToCamelCase } from "@/lib/utils";
 import type { ProductsResponse } from "@/types/product";
@@ -27,7 +27,7 @@ export default async function ProductsSection({
   const productsResponse: ProductsResponse = keysToCamelCase(
     await getProducts(token, {
       page,
-      pageSize: 1,
+      pageSize: 6,
     }),
   );
   const { currentPage, total } = productsResponse;
