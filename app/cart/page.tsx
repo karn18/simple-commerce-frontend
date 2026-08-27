@@ -1,5 +1,5 @@
-import MyCart from "@/components/my-cart";
-import Navbar from "@/components/navbar";
+import MyCart from "@/components/nav/my-cart";
+import Navbar from "@/components/nav/navbar";
 
 export default function Cart() {
   return (

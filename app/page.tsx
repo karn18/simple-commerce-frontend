@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import BannerSection from "@/components/banner-section";
 import { BannerSkeleton, ProductsSkeleton } from "@/components/home-skeletons";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/nav/navbar";
 import ProductsSection from "@/components/products-section";
 
 export default async function Home({
@@ -11,10 +11,10 @@ export default async function Home({
 }) {
   return (
     <div className="flex min-h-screen flex-col items-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex w-full max-w-3xl flex-1 flex-col gap-10 bg-white px-4 py-6 dark:bg-black sm:px-8 sm:py-8 mx-auto">
+      <main className="flex w-full max-w-3xl flex-1 flex-col gap-4 bg-white px-4 dark:bg-black sm:px-8 mx-auto">
         <Navbar />
 
-        <section aria-label="Promotions" className="w-full">
+        <section aria-label="Promotions" className="w-full h-70">
           <Suspense fallback={<BannerSkeleton />}>
             <BannerSection />
           </Suspense>

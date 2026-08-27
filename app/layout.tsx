@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
 import { AppProvider } from "@/contexts/app-context";
 import { cn } from "@/lib/utils";
 
@@ -41,7 +42,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
     >
       <body className="min-h-full flex flex-col">
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          {children}
+          {/* <Footer /> */}
+        </AppProvider>
       </body>
     </html>
   );
