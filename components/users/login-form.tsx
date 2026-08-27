@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type React from "react";
 import { type SubmitEvent, useState } from "react";
@@ -82,6 +83,9 @@ export function LoginForm({
               </Field>
             </FieldGroup>
           </form>
+          <p>
+            No account? <Link href="/signup">Signup here</Link>
+          </p>
         </CardContent>
       </Card>
     </div>

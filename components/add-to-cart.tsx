@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useAppContext } from "@/contexts/app-context";
 import type { Product } from "@/types/product";
-import NumberInput from "./number-input";
+import NumberInput from "./product/number-input";
 import { Button } from "./ui/button";
 
 interface AddToCartProps {

@@ -9,9 +9,16 @@ export default function Cart() {
   const { cart } = useAppContext();
 
   return (
-    <Link href="/cart">
+    <Link
+      href="/cart"
+      aria-label={`Shopping cart with ${cart.length} items`}
+      className="relative inline-flex size-6 items-center justify-center"
+    >
       <ShoppingCart />
-      <Badge variant="secondary" className="absolute top-4 right-2">
+      <Badge
+        variant="secondary"
+        className="absolute -right-2 -top-2 h-5 min-w-5 px-1"
+      >
         {cart.length}
       </Badge>
     </Link>

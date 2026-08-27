@@ -4,15 +4,15 @@ import Link from "next/link";
 import { getProducts } from "@/app/api/products";
 import { keysToCamelCase } from "@/lib/utils";
 import type { ProductsResponse } from "@/types/product";
-import AddToCart from "./add-to-cart";
-import CustomPagination from "./custom-pagination";
+import AddToCart from "../add-to-cart";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "../ui/card";
+import CustomPagination from "./custom-pagination";
 
 export default async function ProductsSection({
   searchParams,

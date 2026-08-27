@@ -4,16 +4,16 @@ import { useRouter } from "next/navigation";
 import type { ComponentProps, SubmitEvent } from "react";
 import { checkout } from "@/app/api/checkout";
 import { useAppContext } from "@/contexts/app-context";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Field, FieldGroup, FieldLabel } from "./ui/field";
-import { Input } from "./ui/input";
+} from "../ui/card";
+import { Field, FieldGroup, FieldLabel } from "../ui/field";
+import { Input } from "../ui/input";
 
 export default function CheckoutForm({
   ...props

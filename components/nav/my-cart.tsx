@@ -1,10 +1,10 @@
 "use client";
 
 import { useAppContext } from "@/contexts/app-context";
-import CheckoutForm from "./checkout-form";
+import CheckoutForm from "../checkout/checkout-form";
 
 export default function MyCart() {
-  const { cart, token } = useAppContext();
+  const { cart } = useAppContext();
 
   if (cart.length === 0) {
     return (

@@ -1,8 +1,9 @@
 import { Suspense } from "react";
-import BannerSection from "@/components/banner-section";
+import BannerSection from "@/components/banner/banner-section";
+import Footer from "@/components/footer";
 import { BannerSkeleton, ProductsSkeleton } from "@/components/home-skeletons";
 import Navbar from "@/components/nav/navbar";
-import ProductsSection from "@/components/products-section";
+import ProductsSection from "@/components/product/products-section";
 
 export default async function Home({
   searchParams,
@@ -32,6 +33,8 @@ export default async function Home({
             <ProductsSection searchParams={searchParams} />
           </Suspense>
         </section>
+
+        <Footer />
       </main>
     </div>
   );
