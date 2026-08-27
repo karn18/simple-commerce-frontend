@@ -1,3 +1,4 @@
+import { cacheLife } from "next/cache";
 import type { Banner } from "@/types/banner";
 import { BASE_URL } from "./constants";
 
@@ -7,6 +8,7 @@ export async function getBanners(
   token: string | null,
 ): Promise<BannersResponse> {
   "use cache";
+  cacheLife("days");
 
   const response = await fetch(`${BASE_URL}/api/shop/banner/`, {
     method: "GET",

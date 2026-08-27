@@ -1,4 +1,3 @@
-import { keysToCamelCase } from "@/lib/utils";
 import type { ProductsResponse } from "@/types/product";
 import { BASE_URL } from "./constants";
 
@@ -11,6 +10,8 @@ export async function getProducts(
   token: string | undefined,
   { page = 1, pageSize = 10 }: ProductProps,
 ): Promise<ProductsResponse> {
+  "use cache";
+
   const query = new URLSearchParams({
     page: page.toString(),
     page_size: pageSize.toString(),
