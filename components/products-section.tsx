@@ -27,18 +27,18 @@ export default async function ProductsSection({
   const productsResponse: ProductsResponse = keysToCamelCase(
     await getProducts(token, {
       page,
-      pageSize: 6,
+      pageSize: 1,
     }),
   );
-  const { currentPage, total } = productsResponse;
+  const { currentPage, pages } = productsResponse;
   const products = productsResponse.results;
 
   return (
     <>
-      <div className="w-full grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">
         {products.map((product) => (
           <Card
-            className="hover:border-primary border-primary/10 rounded-none border pt-0 shadow-none ring-0 transition-colors duration-300 max-lg:last:col-span-full"
+            className="hover:border-primary border-primary/10 rounded-none border pt-0 shadow-none ring-0 transition-colors duration-300"
             key={product.id}
           >
             <CardContent className="px-0">
@@ -65,7 +65,7 @@ export default async function ProductsSection({
         ))}
       </div>
       <div>
-        <CustomPagination currentPage={currentPage} total={total} url="/" />
+        <CustomPagination currentPage={currentPage} total={pages} url="/" />
       </div>
     </>
   );

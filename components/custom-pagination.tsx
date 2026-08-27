@@ -19,6 +19,7 @@ export default function CustomPagination({
   total,
   url,
 }: CustomPaginationProps) {
+  console.debug(total, currentPage);
   const nextUrl = currentPage < total ? `${url}?page=${currentPage + 1}` : null;
   const previousUrl = currentPage > 1 ? `${url}?page=${currentPage - 1}` : null;
   return (
